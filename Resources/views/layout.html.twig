@@ -1,0 +1,17 @@
+{% extends 'KasselerSymblogBundle::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent () }}
+
+    {% stylesheets
+    '@KasselerSymblogBundle/Resources/public/css/*'
+    debug=true
+    output='css/main.css'
+    %}
+    <link href="{{ asset_url }}" rel="stylesheet" media="screen" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block sidebar %}
+    {% render(controller("KasselerSymblogBundle:Page:sidebar")) %}
+{% endblock %}

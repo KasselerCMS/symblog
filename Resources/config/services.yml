@@ -1,0 +1,1 @@
+services:    symblog.twig.extension:        class: Kasseler\Symblog\Twig\Extensions\KasselerBlogExtension        tags:            - { name: twig.extension }
